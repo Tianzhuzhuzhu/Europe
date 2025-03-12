@@ -15,6 +15,17 @@
       height: 100vh;
       margin: 0;
       flex-direction: column;
+      padding-top: 80px; /* 防止内容被固定的部分遮挡 */
+    }
+    /* 固定在顶部的部分 */
+    .header-container {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: white;
+      padding: 10px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .button-container {
       text-align: center;
