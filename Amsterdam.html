@@ -5,52 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>阿姆斯特丹大学</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      flex-direction: column;
-      padding-top: 80px; /* 防止内容被固定的部分遮挡 */
-    }
-    /* 固定在顶部的部分 */
-    .header-container {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: white;
-      padding: 10px 0;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .button-container {
-      text-align: center;
-      align-items: flex-start;
-      display: flex;
-      justify-content: space-around;  /* 确保按钮水平排列 */
-      gap: 30px;  /* 设置按钮之间的间距 */
-      margin-bottom: 30px;  /* 让按钮组和下方按钮之间有间距 */
-    }
-    .button-container div {
-      text-align: center;
-    }
-    button {
-      background-color: #0073e6;
-      color: white;
-      border: none;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #005bb5;
-    }
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 让内容靠左 */
+  padding: 20px; /* 添加一些内边距 */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px; /* 让不同按钮组之间有一定间距 */
+}
+
+button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
     /* 右下角返回按钮 */
     .back-button {
       position: fixed;
