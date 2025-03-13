@@ -23,6 +23,19 @@
       gap: 30px;  /* 设置按钮之间的间距 */
       margin-bottom: 30px;  /* 让按钮组和下方按钮之间有间距 */
     }
+    .tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+    white-space: nowrap;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
     .button-container div {
       text-align: center;
     }
@@ -63,7 +76,8 @@
     </div>
     <div>
       <p>申请要求</p>
-      <button onclick="window.location.href='https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/admission-requirements/diploma-with-additional-requirements#c106231'">→</button>
+      <button onmouseover="showTooltip(this)" onmouseout="hideTooltip(this)" onclick="window.location.href='https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/admission-requirements/diploma-with-additional-requirements#c106231'">→</button>
+      <div class="tooltip">点击查看详情</div>
     </div>
   </div>
 
@@ -96,7 +110,19 @@
       <button onclick="window.location.href='https://www.tudelft.nl/en/education/admission-and-application/bsc-international-diploma/admission-requirements/diploma-with-additional-requirements#c106230'">→</button>
     </div>
   </div>
-	
+
+
+<script>
+  function showTooltip(button) {
+    let tooltip = button.nextElementSibling;
+    tooltip.style.display = "block";
+  }
+
+  function hideTooltip(button) {
+    let tooltip = button.nextElementSibling;
+    tooltip.style.display = "none";
+  }
+</script>
 	
 	
   <!-- 右下角返回按钮 -->
