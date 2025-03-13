@@ -24,7 +24,7 @@
       margin-bottom: 30px;  /* 让按钮组和下方按钮之间有间距 */
     }
     .tooltip {
-    position: absolute;
+    position: relative;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 5px 10px;
@@ -114,12 +114,12 @@
 
 <script>
   function showTooltip(button) {
-    let tooltip = button.nextElementSibling;
+    let tooltip = button.querySelector(".tooltip");
     tooltip.style.display = "block";
   }
 
   function hideTooltip(button) {
-    let tooltip = button.nextElementSibling;
+    let tooltip = button.querySelector(".tooltip");
     tooltip.style.display = "none";
   }
 </script>
